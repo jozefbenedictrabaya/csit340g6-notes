@@ -93,6 +93,11 @@ function Notes() {
               <NoteCard title={note.title} body={note.body} />
               <button
                 type="button"
+                onClick={() =>
+                  setNotes((currentNotes) =>
+                    currentNotes.filter((currentNote) => currentNote.id !== note.id),
+                  )
+                }
                 className="absolute top-4 right-5 cursor-pointer text-[26px] leading-none text-[#949494] hover:text-[#c18585]"
               >
                 ×
